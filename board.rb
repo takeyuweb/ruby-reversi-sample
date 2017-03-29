@@ -75,6 +75,7 @@ class Board
   # 勝者
   # 数の多い方が勝ち
   def winner
+    return unless gameover?
     if dark_count > light_count
       :dark
     elsif dark_count < light_count
